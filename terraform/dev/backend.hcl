@@ -1,6 +1,6 @@
 hostname     = "app.terraform.io"
-organization = "desafio-aws-com-terraform"
+organization = "slashicorp"
 
 workspaces {
-  name = "default"
+  name = "tf-cloud"
 }
