@@ -38,10 +38,10 @@ Para: `api.mercadolibre.com/categories/MLM189580`
 ### Preparando o ambiente:
 1. [Instalando Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli#overview)
 2. [Instalando AWS CLI](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/install-cliv2.html#overview)
-2.1 *Para configurar o aws-cli com este usuário, siga o `how-to` disponivel em: [Configurando AWS CLI](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-configure-quickstart.html#overview)*
-3. [Configurando Terraform Cloud](https://www.terraform.io/docs/cli/config/config-file.html#overview)
-3.1 *Para configurar o tf-cloud faz-se necessário cadastrar um usuário em: [Sing up](https://app.terraform.io/signup/account#overview)*
-4. [Terraform Documentation](https://www.terraform.io/docs/index.html#overview)
+3. *Para configurar o aws-cli com este usuário, siga o `how-to` disponivel em: [Configurando AWS CLI](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-configure-quickstart.html#overview)*
+4. [Configurando Terraform Cloud](https://www.terraform.io/docs/cli/config/config-file.html#overview)
+5. *Para configurar o tf-cloud faz-se necessário cadastrar um usuário em: [Sing up](https://app.terraform.io/signup/account#overview)*
+6. [Terraform Documentation](https://www.terraform.io/docs/index.html#overview)
 
 ### Permissões necessárias para terraform-user:
 Para garantir que seu Terraform consiga realizar a criação de todos recursos contidos neste projeto, recomendo a criação de um User (exemplo `terraform-user`), garanta que ele possua as seguintes permissões, do contrário, permita apenas acesso aos resources que deseja provisionar.
