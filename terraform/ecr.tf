@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "this" {
-  name = "${local.app_name}-repository"
+  name          = "${local.app_name}-repository"
 }
 
 resource "null_resource" "docker" {
