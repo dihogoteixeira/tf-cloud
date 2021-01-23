@@ -15,6 +15,10 @@
 # FINALIDADE DO PROJETO
 
 Projeto desenvolvido para automatizar a infraestrutura de uma solução de API Gateway resiliente, auto-escalável e utilizando de tecnologias 100% como serviço na AWS Cloud.
+No final da execução, teremos um API Gateway Fazendo redirecionamento de uma URI para outra, no meu caso:
+
+De: `mlm189580.categories.meli.api.slashicorp.com.br`
+Para: `api.mercadolibre.com/categories/MLM189580`
 
 ### A STACK CONSISTE EM IMPLEMENTAR
 
