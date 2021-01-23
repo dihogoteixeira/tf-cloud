@@ -2,7 +2,7 @@
 
 ![Terraform-cloud](https://img.shields.io/badge/terraform-cloud-blueviolet?style=flat-square)
 ![Terraform-0-14-5](https://img.shields.io/badge/terraform-0.14.5-blue?style=flat-square)
-![aws cli 2](https://img.shields.io/badge/aws-cli-2-orange?style=flat-square)
+![aws cli-v2](https://img.shields.io/badge/aws-cli-v2-orange?style=flat-square)
 ![aws ecr](https://img.shields.io/badge/aws-ecr-orange?style=flat-square)
 ![aws ecs](https://img.shields.io/badge/aws-ecs--fargate-orange?style=flat-square)
 ![aws vpc](https://img.shields.io/badge/aws-vpc-orange?style=flat-square)
