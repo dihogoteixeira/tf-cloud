@@ -16,30 +16,30 @@
 
 Projeto desenvolvido para automatizar a infraestrutura de uma solução de API Gateway resiliente, auto-escalável e utilizando de tecnologias 100% como serviço na AWS Cloud.
 
-### A STACK CONSISTE EM IMPLEMEENTAR
+### A STACK CONSISTE EM IMPLEMENTAR
 
-1. ![VPC](terraform/network.tf "VPC")
-2. ![SUBNET](terraform/network.tf "SUBNET")
-3. ![SG](terraform/security.tf "SG")
-4. ![IGW](terraform/network.tf "IGW")
-5. ![RT](terraform/network.tf "RT")
-6. ![EIP](terraform/network.tf "EIP")
-7. ![NGW](terraform/network.tf "NGW")
-8. ![ECR](terraform/ecr.tf "ECR")
-9. ![ECS](terraform/ecs.tf "ECS")
-10. ![IAM](terraform/iam.tf "IAM")
+1.  [VPC](terraform/network.tf "VPC")
+2.  [SUBNET](terraform/network.tf "SUBNET")
+3.  [SG](terraform/security.tf "SG")
+4.  [IGW](terraform/network.tf "IGW")
+5.  [RT](terraform/network.tf "RT")
+6.  [EIP](terraform/network.tf "EIP")
+7.  [NGW](terraform/network.tf "NGW")
+8.  [ECR](terraform/ecr.tf "ECR")
+9.  [ECS](terraform/ecs.tf "ECS")
+10. [IAM](terraform/iam.tf "IAM")
 
-# PRE-RECS
+# PRÉ REQUISITOS
 
 ### Preparando o ambiente:
-1  [Instalando Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli#overview)
+1. [Instalando Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli#overview)
 2. [Instalando AWS CLI](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/install-cliv2.html#overview)
 Para configurar o aws-cli com este usuário, siga o `how-to` disponivel em: [Configurando AWS CLI](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-configure-quickstart.html#overview)
 3. [Configurando Terraform Cloud](https://www.terraform.io/docs/cli/config/config-file.html#overview)
 Para configurar o tf-cloud faz-se necessário cadastrar um usuário em: [Sing up](https://app.terraform.io/signup/account#overview)
 4. [Terraform Documentation](https://www.terraform.io/docs/index.html#overview)
 
-### Modo de utilizar:
+### Permissões necessárias para terraform-user:
 Para garantir que seu Terraform consiga realizar a criação de todos recursos contidos neste projeto, recomendo a criação de um User (exemplo `terraform-user`), garanta que ele possua as seguintes permissões, do contrário, permita apenas acesso aos resources que deseja provisionar.
 
 ```
@@ -96,7 +96,7 @@ Para garantir que seu Terraform consiga realizar a criação de todos recursos c
 }
 ```
 
-### ESTRUTURA DO PROJETO
+### Estrutura do projeto
 
 ```
 .
@@ -130,18 +130,18 @@ Para garantir que seu Terraform consiga realizar a criação de todos recursos c
     └── variables.tf
 ```
 
-### CONTEUDO DO CONTAINER
+### Conteúdo do container
 
 A criação do container é relativamente simples, subimos uma imagm base `NGINX:LATEST`, removemos as configurações default do nginx e aplicamos uma configuração previa para realizar o redirecionamento com o método `return 301` da `request_uri` redirecionando da URI: `mlm189580.categories.meli.api.slashicorp.com.br` para API: `api.mercadolibre.com/categories/MLM189580`
 Configurações contidas no path `app`.
 Realizamos o push da imagem para o `ECR` em tempo de execução e aplicamos a mesma ao `ECS`.
 
-### PREPARANDO ENVIRONMENTS DO TF-CLOUD
+### Preparando Environment do TF-CLOUD
 
 Para iniciar o projeto, é necessário definir o backend.hcl (`Hashicorp Language`), para os ambientes de `DEV` e `PRD` contidos no path `terraform` do pojeto, altere a organização e o workspaces que deseja armazenar e/ou executar seu state em https://app.terraform.io.
 Caso queira mais informações acesse sobre como utilizar a workspace `default`: [CLI-driven runs](https://app.terraform.io/app/slashicorp/workspaces/default/runs#overview)
 
-### TORNANDO SCRIPTS EXECUTÁVEIS
+### Tornando seus scripts executáveis
 
 Para executar todo o procedimento para construir ou destruir os resources basta executar os scripts `deploy.sh` e `destroy.sh` no path `terraform`. 
 Torne eles executáveis para o sistema aplicando o seguinte comando:
@@ -150,14 +150,18 @@ Torne eles executáveis para o sistema aplicando o seguinte comando:
 $ chmod +x deploy.sh && chmod +x destroy.sh
 ```
 
-### EXECUTANDO O DEPLOY DOS RESOURCES
+### Executando o DEPLOY dos resources
+
+Para mudar de ambiente altere a variavel `ENV` no arquivo, default é `DEV`.
 
 ```
 $ cd terraform
 $ bash ./deploy.sh
 ```
 
-### EXECUTANDO O DESTROY DOS RESOURCES
+### Executando o DESTROY dos resources
+
+Para mudar de ambiente altere a variavel `ENV` no arquivo, default é `DEV`.
 
 ```
 $ cd terraform
