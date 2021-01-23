@@ -55,7 +55,7 @@ variable "ac_max_capacity" {
 }
 
 variable "cidrblock" {
-  default = "10.10.0.0/16"
+  default = "10.0.0.0/16"
 }
 
 variable "log_retention" {
