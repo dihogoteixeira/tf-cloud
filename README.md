@@ -18,7 +18,7 @@ Projeto desenvolvido para automatizar a infraestrutura de uma solução de API G
 
 ### A STACK CONSISTE EM IMPLEMEENTAR
 
-1.  ![VPC](network.tf "VPC")
+1.  ![VPC](./network.tf "VPC")
 2.  ![SUBNET](network.tf "SUBNET")
 3.  ![SG](security.tf "SG")
 4.  ![IGW](network.tf "IGW")
