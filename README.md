@@ -18,16 +18,16 @@ Projeto desenvolvido para automatizar a infraestrutura de uma solução de API G
 
 ### A STACK CONSISTE EM IMPLEMEENTAR
 
-1.  ![VPC](terraform/network.tf "VPC")
-2.  ![SUBNET](terraform/network.tf "SUBNET")
-3.  ![SG](terraform/security.tf "SG")
-4.  ![IGW](terraform/network.tf "IGW")
-5.  ![RT](terraform/network.tf "RT")
-6.  ![EIP](terraform/network.tf "EIP")
-7.  ![NGW](terraform/network.tf "NGW")
-8.  ![ECR](terraform/ecr.tf "ECR")
-9.  ![ECS](terraform/ecs.tf "ECS")
-10. ![IAM](terraform/iam.tf "IAM")
+1.![VPC](terraform/network.tf "VPC")
+2.![SUBNET](terraform/network.tf "SUBNET")
+3.![SG](terraform/security.tf "SG")
+4.![IGW](terraform/network.tf "IGW")
+5.![RT](terraform/network.tf "RT")
+6.![EIP](terraform/network.tf "EIP")
+7.![NGW](terraform/network.tf "NGW")
+8.![ECR](terraform/ecr.tf "ECR")
+9.![ECS](terraform/ecs.tf "ECS")
+10.![IAM](terraform/iam.tf "IAM")
 
 # PRE-RECS
 
